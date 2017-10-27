@@ -19,14 +19,17 @@ $ npm install nba-color
 
 ```js
 const chalk = require('chalk');
-const { getMainColor } = require('nba-color');
+const { getMainColor, getFullName } = require('nba-color');
 
-const warriorsColor = getMainColor('GSW').hex;
+const warriors = 'GSW';
+const { hex: warriorsColorHex } = getMainColor(warriors);
+const warriorsFullName = getFullName(warriors);
 
-console.log(chalk.bgHex(warriorsColor).bold('Golden State Warriors'));
+console.log(chalk.bgHex(warriorsColorHex).bold(warriorsFullName));
 ```
 result:
-![screen shot 2017-10-27 at 9 40 06 pm](https://user-images.githubusercontent.com/12113222/32106924-b1dcd7f8-baf2-11e7-83f6-6a111765c652.png)
+![screen shot 2017-10-28](https://user-images.githubusercontent.com/12113222/32114858-451ab492-bb0a-11e7-8839-b3012977a18c.png)
+
 
 ## API
 
