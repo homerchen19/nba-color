@@ -28,84 +28,84 @@ describe('NbaColor', () => {
     });
   });
 
-  describe('getTeamMainColor', () => {
-    const { getTeamMainColor } = NbaColor;
+  describe('getMainColor', () => {
+    const { getMainColor } = NbaColor;
 
     it('should exist', () => {
-      expect(getTeamMainColor).toBeDefined();
+      expect(getMainColor).toBeDefined();
     });
 
     it('should return undefined if pass excluded team abbreviation', () => {
-      const teamMainColor = getTeamMainColor('QQ');
+      const teamMainColor = getMainColor('QQ');
 
       expect(teamMainColor).toBe(undefined);
     });
 
     it('should match colorSchema if pass included team abbreviation', () => {
-      const teamMainColor = getTeamMainColor('GSW');
+      const teamMainColor = getMainColor('GSW');
       const validateResult = Joi.validate(teamMainColor, colorSchema);
 
       expect(validateResult.error).toBe(null);
     });
   });
 
-  describe('getTeamColors', () => {
-    const { getTeamColors } = NbaColor;
+  describe('getColors', () => {
+    const { getColors } = NbaColor;
 
     it('should exist', () => {
-      expect(getTeamColors).toBeDefined();
+      expect(getColors).toBeDefined();
     });
 
     it('should return undefined if pass excluded team abbreviation', () => {
-      const teamColors = getTeamColors('QQ');
+      const teamColors = getColors('QQ');
 
       expect(teamColors).toBe(undefined);
     });
 
     it('should match colorsSchema if pass included team abbreviation', () => {
-      const teamColors = getTeamColors('BOS');
+      const teamColors = getColors('BOS');
       const validateResult = Joi.validate(teamColors, colorsSchema);
 
       expect(validateResult.error).toBe(null);
     });
   });
 
-  describe('getTeamColorsList', () => {
-    const { getTeamColorsList } = NbaColor;
+  describe('getColorsList', () => {
+    const { getColorsList } = NbaColor;
 
     it('should exist', () => {
-      expect(getTeamColorsList).toBeDefined();
+      expect(getColorsList).toBeDefined();
     });
 
     it('should return undefined if pass excluded team abbreviation', () => {
-      const teamColorsList = getTeamColorsList('QQ');
+      const teamColorsList = getColorsList('QQ');
 
       expect(teamColorsList).toBe(undefined);
     });
 
     it('should match colorsListSchema if pass included team abbreviation', () => {
-      const teamColorsList = getTeamColorsList('OKC');
+      const teamColorsList = getColorsList('OKC');
       const validateResult = Joi.validate(teamColorsList, colorsListSchema);
 
       expect(validateResult.error).toBe(null);
     });
   });
 
-  describe('getTeamFullName', () => {
-    const { getTeamFullName } = NbaColor;
+  describe('getFullName', () => {
+    const { getFullName } = NbaColor;
 
     it('should exist', () => {
-      expect(getTeamFullName).toBeDefined();
+      expect(getFullName).toBeDefined();
     });
 
     it('should return undefined if pass excluded team abbreviation', () => {
-      const teamFullName = getTeamFullName('QQ');
+      const teamFullName = getFullName('QQ');
 
       expect(teamFullName).toBe(undefined);
     });
 
     it('should return full name if pass included team abbreviation', () => {
-      const teamFullName = getTeamFullName('CHI');
+      const teamFullName = getFullName('CHI');
 
       expect(typeof teamFullName).toBe('string');
       expect(teamFullName).toEqual('Chicago Bulls');

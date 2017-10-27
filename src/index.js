@@ -2,7 +2,7 @@ import NbaColors from './colors';
 
 const getAllColors = () => NbaColors;
 
-const getTeamMainColor = teamAbbreviation => {
+const getMainColor = teamAbbreviation => {
   if (NbaColors[teamAbbreviation]) {
     return NbaColors[teamAbbreviation].mainColor;
   }
@@ -10,7 +10,7 @@ const getTeamMainColor = teamAbbreviation => {
   return undefined;
 };
 
-const getTeamColors = teamAbbreviation => {
+const getColors = teamAbbreviation => {
   if (NbaColors[teamAbbreviation]) {
     return NbaColors[teamAbbreviation].colors;
   }
@@ -18,7 +18,7 @@ const getTeamColors = teamAbbreviation => {
   return undefined;
 };
 
-const getTeamColorsList = teamAbbreviation => {
+const getColorsList = teamAbbreviation => {
   if (NbaColors[teamAbbreviation]) {
     return Object.keys(NbaColors[teamAbbreviation].colors);
   }
@@ -26,7 +26,7 @@ const getTeamColorsList = teamAbbreviation => {
   return undefined;
 };
 
-const getTeamFullName = teamAbbreviation => {
+const getFullName = teamAbbreviation => {
   if (NbaColors[teamAbbreviation]) {
     return NbaColors[teamAbbreviation].fullName;
   }
@@ -36,8 +36,8 @@ const getTeamFullName = teamAbbreviation => {
 
 module.exports = {
   getAllColors,
-  getTeamMainColor,
-  getTeamColors,
-  getTeamFullName,
-  getTeamColorsList,
+  getMainColor,
+  getColors,
+  getFullName,
+  getColorsList,
 };

@@ -4,6 +4,8 @@
 
 ![screen shot 2017-10-27 at 9 33 07 pm](https://user-images.githubusercontent.com/12113222/32106524-925211e2-baf1-11e7-95e0-5d82a52cc7c0.png)
 
+<a target="_blank" href="https://opensource.org/licenses/MIT" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+<a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"></a>
 ## Install
 
 ```
@@ -14,9 +16,9 @@ $ npm install nba-color
 
 ```js
 const chalk = require('chalk');
-const { getTeamMainColor } = require('nba-color');
+const { getMainColor } = require('nba-color');
 
-const warriorsColor = getTeamMainColor('GSW').hex;
+const warriorsColor = getMainColor('GSW').hex;
 
 console.log(chalk.bgHex(warriorsColor).bold('Golden State Warriors'));
 ```
@@ -30,7 +32,7 @@ result:
 Return the `object` containing all NBA teams colors data.  
 The `Object`'s keys are **[Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**
 
-### getTeamMainColor(teamAbbreviation) => `Object`
+### getMainColor(teamAbbreviation) => `Object`
 
 Return an `object` containing the NBA team main color's **Hexadecimal Colors Code** and **RGB Color Code**.  
 
@@ -39,9 +41,9 @@ If received an excluded team abbreviation, return `undefined`.
 
 Example
 ```js
-const { getTeamMainColor } = require('nba-color');
+const { getMainColor } = require('nba-color');
 
-console.log(getTeamMainColor('CLE'));
+console.log(getMainColor('CLE'));
 
 /*
 {
@@ -51,7 +53,7 @@ console.log(getTeamMainColor('CLE'));
 */
 ```
 
-### getTeamColors(teamAbbreviation) => `Object`
+### getColors(teamAbbreviation) => `Object`
 
 Return an `object` containing the NBA team all colors, including **Hexadecimal Colors Code** and **RGB Color Code** for each color.
 
@@ -60,9 +62,9 @@ If received an excluded team abbreviation, return `undefined`.
 
 Example
 ```js
-const { getTeamColors } = require('nba-color');
+const { getColors } = require('nba-color');
 
-console.log(getTeamColors('LAL'));
+console.log(getColors('LAL'));
 
 /*
 {
@@ -82,7 +84,7 @@ console.log(getTeamColors('LAL'));
 */
 ```
 
-### getTeamColorsList(teamAbbreviation) => `Array`
+### getColorsList(teamAbbreviation) => `Array`
 
 Return an `array` containing the NBA team colors.
 
@@ -91,16 +93,16 @@ If received an excluded team abbreviation, return `undefined`.
 
 Example
 ```js
-const { getTeamColorsList } = require('nba-color');
+const { getColorsList } = require('nba-color');
 
-console.log(getTeamColorsList('LAL'));
+console.log(getColorsList('LAL'));
 
 /*
 ['purple', 'gold', 'white']
 */
 ```
 
-### getTeamFullName(teamAbbreviation) => `String`
+### getFullName(teamAbbreviation) => `String`
 
 Return the NBA team full name.
 
@@ -109,9 +111,9 @@ If received an excluded team abbreviation, return `undefined`.
 
 Example
 ```js
-const { getTeamFullName } = require('nba-color');
+const { getFullName } = require('nba-color');
 
-console.log(getTeamFullName('SAS'));
+console.log(getFullName('SAS'));
 
 /*
 'San Antonio Spurs'
