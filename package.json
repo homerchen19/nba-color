@@ -8,7 +8,11 @@
     "clean": "rimraf lib",
     "precommit": "lint-staged",
     "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint:fix && npm run testonly",
+    "testonly": "NODE_ENV=test jest",
+    "testonly:cov": "jest --coverage --runInBand --forceExit --no-cache",
+    "testonly:watch": "jest --watch"
   },
   "author": "xxhomey19",
   "keywords": ["NBA", "color"],
@@ -17,10 +21,13 @@
     "url": "https://github.com/xxhomey19/nba-color/issues"
   },
   "homepage": "https://github.com/xxhomey19/nba-color#readme",
-  "dependencies": {},
+  "dependencies": {
+    "joi": "11.3.4"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.1",
+    "babel-jest": "21.2.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -31,6 +38,7 @@
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
     "husky": "^0.14.3",
+    "jest": "21.2.1",
     "lint-staged": "^4.3.0",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2"
@@ -41,5 +49,10 @@
   },
   "lint-staged": {
     "*.js": ["eslint --fix", "git add"]
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.js"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/__tests__/"],
+    "testPathIgnorePatterns": ["node_modules/"]
   }
 }

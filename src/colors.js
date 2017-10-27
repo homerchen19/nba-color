@@ -1,20 +1,20 @@
-Object.defineProperty(exports, '__esModule', {
-  value: true,
-});
 const pureWhite = {
-  hex: '#fff',
+  hex: '#ffffff',
   rgb: [255, 255, 255],
 };
 
 const pureBlack = {
-  hex: '#000',
+  hex: '#000000',
   rgb: [0, 0, 0],
 };
 
-const nbaColor = {
+const colors = {
   ATL: {
     fullName: 'Atlanta Hawks',
-    mainColor: '#C8102E',
+    mainColor: {
+      hex: '#C8102E',
+      rgb: [200, 16, 46],
+    },
     colors: {
       red: {
         hex: '#C8102E',
@@ -33,7 +33,10 @@ const nbaColor = {
   },
   BKN: {
     fullName: 'Brooklyn Nets',
-    mainColor: '#010101',
+    mainColor: {
+      hex: '#010101',
+      rgb: [1, 1, 1],
+    },
     colors: {
       black: {
         hex: '#010101',
@@ -44,7 +47,10 @@ const nbaColor = {
   },
   BOS: {
     fullName: 'Boston Celtics',
-    mainColor: '#007A33',
+    mainColor: {
+      hex: '#007A33',
+      rgb: [0, 122, 51],
+    },
     colors: {
       green: {
         hex: '#007A33',
@@ -64,7 +70,10 @@ const nbaColor = {
   },
   CHA: {
     fullName: 'Charlotte Hornets',
-    mainColor: '#201747',
+    mainColor: {
+      hex: '#201747',
+      rgb: [32, 23, 71],
+    },
     colors: {
       purple: {
         hex: '#201747',
@@ -74,7 +83,7 @@ const nbaColor = {
         hex: '#00778B',
         rgb: [0, 119, 139],
       },
-      white: '#fff',
+      white: pureWhite,
       gray: {
         hex: '#888B8D',
         rgb: [136, 139, 141],
@@ -83,7 +92,10 @@ const nbaColor = {
   },
   CHI: {
     fullName: 'Chicago Bulls',
-    mainColor: '#BA0C2F',
+    mainColor: {
+      hex: '#BA0C2F',
+      rgb: [186, 12, 47],
+    },
     colors: {
       red: {
         hex: '#BA0C2F',
@@ -95,7 +107,10 @@ const nbaColor = {
   },
   CLE: {
     fullName: 'Cleveland Cavaliers',
-    mainColor: '#6F263D',
+    mainColor: {
+      hex: '#6F263D',
+      rgb: [111, 38, 61],
+    },
     colors: {
       wine: {
         hex: '#6F263D',
@@ -114,7 +129,10 @@ const nbaColor = {
   },
   DAL: {
     fullName: 'Dallas Mavericks',
-    mainColor: '#0050B5',
+    mainColor: {
+      hex: '#0050B5',
+      rgb: [0, 80, 181],
+    },
     colors: {
       blue: {
         hex: '#0050B5',
@@ -134,7 +152,10 @@ const nbaColor = {
   },
   DEN: {
     fullName: 'Denver Nuggets',
-    mainColor: '#418FDE',
+    mainColor: {
+      hex: '#418FDE',
+      rgb: [65, 143, 222],
+    },
     colors: {
       blue: {
         hex: '#418FDE',
@@ -153,7 +174,10 @@ const nbaColor = {
   },
   DET: {
     fullName: 'Detroit Pistons',
-    mainColor: '#003DA5',
+    mainColor: {
+      hex: '#003DA5',
+      rgb: [0, 61, 165],
+    },
     colors: {
       blue: {
         hex: '#003DA5',
@@ -172,21 +196,27 @@ const nbaColor = {
   },
   GSW: {
     fullName: 'Golden State Warriors',
-    mainColor: '#FFC72D',
+    mainColor: {
+      hex: '#FFC72D',
+      rgb: [255, 199, 44],
+    },
     colors: {
-      blue: {
-        hex: '#003DA5',
-        rgb: [0, 61, 165],
-      },
       gold: {
         hex: '#FFC72D',
         rgb: [255, 199, 44],
+      },
+      blue: {
+        hex: '#003DA5',
+        rgb: [0, 61, 165],
       },
     },
   },
   HOU: {
     fullName: 'Houston Rockets',
-    mainColor: '#BA0C2F',
+    mainColor: {
+      hex: '#BA0C2F',
+      rgb: [186, 12, 47],
+    },
     colors: {
       red: {
         hex: '#BA0C2F',
@@ -206,7 +236,10 @@ const nbaColor = {
   },
   IND: {
     fullName: 'Indiana Pacers',
-    mainColor: '#041E42',
+    mainColor: {
+      hex: '#041E42',
+      rgb: [4, 30, 66],
+    },
     colors: {
       blue: {
         hex: '#041E42',
@@ -225,7 +258,10 @@ const nbaColor = {
   },
   LAC: {
     fullName: 'Los Angeles Clippers',
-    mainColor: '#D50032',
+    mainColor: {
+      hex: '#D50032',
+      rgb: [213, 0, 50],
+    },
     colors: {
       red: {
         hex: '#D50032',
@@ -244,7 +280,10 @@ const nbaColor = {
   },
   LAL: {
     fullName: 'Los Angeles Lakers',
-    mainColor: '#702F8A',
+    mainColor: {
+      hex: '#702F8A',
+      rgb: [112, 47, 138],
+    },
     colors: {
       purple: {
         hex: '#702F8A',
@@ -259,7 +298,10 @@ const nbaColor = {
   },
   MEM: {
     fullName: 'Memphis Grizzlies',
-    mainColor: '#23375B',
+    mainColor: {
+      hex: '#23375B',
+      rgb: [35, 55, 91],
+    },
     colors: {
       midnightBlue: {
         hex: '#23375B',
@@ -281,7 +323,10 @@ const nbaColor = {
   },
   MIA: {
     fullName: 'Miami Heat',
-    mainColor: '#862633',
+    mainColor: {
+      hex: '#862633',
+      rgb: [134, 38, 51],
+    },
     colors: {
       red: {
         hex: '#862633',
@@ -297,7 +342,10 @@ const nbaColor = {
   },
   MIL: {
     fullName: 'Milwaukee Bucks',
-    mainColor: '#2C5234',
+    mainColor: {
+      hex: '#2C5234',
+      rgb: [44, 82, 52],
+    },
     colors: {
       green: {
         hex: '#2C5234',
@@ -317,7 +365,10 @@ const nbaColor = {
   },
   MIN: {
     fullName: 'Minnesota Timberwolves',
-    mainColor: '#002B5C',
+    mainColor: {
+      hex: '#002B5C',
+      rgb: [0, 42, 92],
+    },
     colors: {
       blue: {
         hex: '#002B5C',
@@ -336,7 +387,10 @@ const nbaColor = {
   },
   NOP: {
     fullName: 'New Orleans Pelicans',
-    mainColor: '#002B5C',
+    mainColor: {
+      hex: '#002B5C',
+      rgb: [0, 43, 92],
+    },
     colors: {
       blue: {
         hex: '#002B5C',
@@ -355,7 +409,10 @@ const nbaColor = {
   },
   NYK: {
     fullName: 'New York Knicks',
-    mainColor: '#003DA5',
+    mainColor: {
+      hex: '#003DA5',
+      rgb: [0, 61, 165],
+    },
     colors: {
       blue: {
         hex: '#003DA5',
@@ -374,7 +431,10 @@ const nbaColor = {
   },
   OKC: {
     fullName: 'Oklahoma City Thunder',
-    mainColor: '#007DC3',
+    mainColor: {
+      hex: '#007DC3',
+      rgb: [0, 125, 195],
+    },
     colors: {
       blue: {
         hex: '#007DC3',
@@ -396,7 +456,10 @@ const nbaColor = {
   },
   ORL: {
     fullName: 'Orlando Magic',
-    mainColor: '#007DC5',
+    mainColor: {
+      hex: '#007DC5',
+      rgb: [0, 125, 197],
+    },
     colors: {
       blue: {
         hex: '#007DC5',
@@ -412,7 +475,10 @@ const nbaColor = {
   },
   PHI: {
     fullName: 'Philadelphia 76ers',
-    mainColor: '#006BB6',
+    mainColor: {
+      hex: '#006BB6',
+      rgb: [0, 102, 182],
+    },
     colors: {
       blue: {
         hex: '#006BB6',
@@ -427,7 +493,10 @@ const nbaColor = {
   },
   PHX: {
     fullName: 'Phoenix Suns',
-    mainColor: '#E56020',
+    mainColor: {
+      hex: '#E56020',
+      rgb: [229, 96, 32],
+    },
     colors: {
       orange: {
         hex: '#E56020',
@@ -447,7 +516,10 @@ const nbaColor = {
   },
   POR: {
     fullName: 'Portland Trailblazers',
-    mainColor: '#F0163A',
+    mainColor: {
+      hex: '#F0163A',
+      rgb: [240, 22, 58],
+    },
     colors: {
       red: {
         hex: '#F0163A',
@@ -463,7 +535,10 @@ const nbaColor = {
   },
   SAC: {
     fullName: 'Sacramento Kings',
-    mainColor: '#724C9F',
+    mainColor: {
+      hex: '#724C9F',
+      rgb: [114, 76, 159],
+    },
     colors: {
       purple: {
         hex: '#724C9F',
@@ -479,7 +554,10 @@ const nbaColor = {
   },
   SAS: {
     fullName: 'San Antonio Spurs',
-    mainColor: '#B6BFBF',
+    mainColor: {
+      hex: '#B6BFBF',
+      rgb: [182, 191, 191],
+    },
     colors: {
       silver: {
         hex: '#B6BFBF',
@@ -491,7 +569,10 @@ const nbaColor = {
   },
   TOR: {
     fullName: 'Toronto Raptors',
-    mainColor: '#CE1141',
+    mainColor: {
+      hex: '#CE1141',
+      rgb: [206, 17, 65],
+    },
     colors: {
       red: {
         hex: '#CE1141',
@@ -507,7 +588,10 @@ const nbaColor = {
   },
   UTA: {
     fullName: 'Utah Jazz',
-    mainColor: '#002B5C',
+    mainColor: {
+      hex: '#002B5C',
+      rgb: [0, 43, 92],
+    },
     colors: {
       navy: {
         hex: '#002B5C',
@@ -529,7 +613,10 @@ const nbaColor = {
   },
   WAS: {
     fullName: 'Washington Wizards',
-    mainColor: '#0C2340',
+    mainColor: {
+      hex: '#0C2340',
+      rgb: [12, 35, 64],
+    },
     colors: {
       navy: {
         hex: '#0C2340',
@@ -548,33 +635,4 @@ const nbaColor = {
   },
 };
 
-const getAllColors = () => nbaColor;
-
-const getTeamMainColor = teamAbbreviation => {
-  if (nbaColor[teamAbbreviation]) {
-    return nbaColor[teamAbbreviation].mainColor;
-  }
-
-  return undefined;
-};
-
-const getTeamColors = teamAbbreviation => {
-  if (nbaColor[teamAbbreviation]) {
-    return nbaColor[teamAbbreviation].colors;
-  }
-
-  return undefined;
-};
-
-const getTeamFullName = teamAbbreviation => {
-  if (nbaColor[teamAbbreviation]) {
-    return nbaColor[teamAbbreviation].fullName;
-  }
-
-  return undefined;
-};
-
-exports.getAllColors = getAllColors;
-exports.getTeamMainColor = getTeamMainColor;
-exports.getTeamColors = getTeamColors;
-exports.getTeamFullName = getTeamFullName;
+export default colors;
