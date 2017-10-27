@@ -1,8 +1,8 @@
 {
   "name": "nba-color",
   "version": "1.0.0",
-  "description": "Get all NBA team's color.",
-  "main": "src/index.js",
+  "description": "Get NBA team's color.",
+  "main": "lib/index.js",
   "scripts": {
     "build": "npm run clean && babel src -d lib",
     "clean": "rimraf lib",
@@ -15,7 +15,7 @@
     "testonly:watch": "jest --watch"
   },
   "author": "xxhomey19",
-  "keywords": ["NBA", "color"],
+  "keywords": ["nba", "color", "basketball"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xxhomey19/nba-color/issues"

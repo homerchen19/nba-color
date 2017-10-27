@@ -1,12 +1,13 @@
 # NBA Color
-
 > Get all NBA team's color code (Hex or RGB).<br>
 > Useful for building NBA-related colorful product.
+
+![screen shot 2017-10-27 at 9 33 07 pm](https://user-images.githubusercontent.com/12113222/32106524-925211e2-baf1-11e7-95e0-5d82a52cc7c0.png)
 
 ## Install
 
 ```
-$ npm install log-update
+$ npm install nba-color
 ```
 
 ## Usage
@@ -19,6 +20,8 @@ const warriorsColor = getTeamMainColor('GSW').hex;
 
 console.log(chalk.bgHex(warriorsColor).bold('Golden State Warriors'));
 ```
+result:
+![screen shot 2017-10-27 at 9 40 06 pm](https://user-images.githubusercontent.com/12113222/32106924-b1dcd7f8-baf2-11e7-83f6-6a111765c652.png)
 
 ## API
 
@@ -113,4 +116,9 @@ console.log(getTeamFullName('SAS'));
 /*
 'San Antonio Spurs'
 */
-```
+```  
+
+
+## License
+
+MIT
