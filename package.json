@@ -1,0 +1,45 @@
+{
+  "name": "nba-color",
+  "version": "1.0.0",
+  "description": "Get all NBA team's color.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d lib",
+    "clean": "rimraf lib",
+    "precommit": "lint-staged",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "author": "xxhomey19",
+  "keywords": ["NBA", "color"],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxhomey19/nba-color/issues"
+  },
+  "homepage": "https://github.com/xxhomey19/nba-color#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxhomey19/nba-color/tree/master"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
+  }
+}
