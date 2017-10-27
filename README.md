@@ -2,10 +2,13 @@
 > Get all NBA team's color code (Hex or RGB).<br>
 > Useful for building NBA-related colorful product.
 
-![screen shot 2017-10-27 at 9 33 07 pm](https://user-images.githubusercontent.com/12113222/32106524-925211e2-baf1-11e7-95e0-5d82a52cc7c0.png)
-
+[![Build Status](https://travis-ci.org/xxhomey19/nba-color.svg?branch=master)](https://travis-ci.org/xxhomey19/nba-color)
+[![Coverage Status](https://coveralls.io/repos/github/xxhomey19/nba-color/badge.svg)](https://coveralls.io/github/xxhomey19/nba-color)
 <a target="_blank" href="https://opensource.org/licenses/MIT" title="License: MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 <a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"></a>
+
+![screen shot 2017-10-27 at 9 33 07 pm](https://user-images.githubusercontent.com/12113222/32106524-925211e2-baf1-11e7-95e0-5d82a52cc7c0.png)
+
 ## Install
 
 ```
@@ -29,12 +32,12 @@ result:
 
 ### getAllColors() => `Object`
 
-Return the `object` containing all NBA teams colors data.  
-The `Object`'s keys are **[Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**
+Return an `Object` containing all NBA teams colors data.  
+The object's keys are **[Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
 
 ### getMainColor(teamAbbreviation) => `Object`
 
-Return an `object` containing the NBA team main color's **Hexadecimal Colors Code** and **RGB Color Code**.  
+Return an `Object` containing the NBA team main color's **Hexadecimal Colors Code** and **RGB Color Code**.  
 
 Note.  
 If received an excluded team abbreviation, return `undefined`.
@@ -55,7 +58,7 @@ console.log(getMainColor('CLE'));
 
 ### getColors(teamAbbreviation) => `Object`
 
-Return an `object` containing the NBA team all colors, including **Hexadecimal Colors Code** and **RGB Color Code** for each color.
+Return an `Object` containing the NBA team all colors, including **Hexadecimal Colors Code** and **RGB Color Code** for each color.
 
 Note.  
 If received an excluded team abbreviation, return `undefined`.
@@ -86,7 +89,7 @@ console.log(getColors('LAL'));
 
 ### getColorsList(teamAbbreviation) => `Array`
 
-Return an `array` containing the NBA team colors.
+Return an `Array` containing the NBA team colors.
 
 Note.  
 If received an excluded team abbreviation, return `undefined`.
@@ -104,7 +107,7 @@ console.log(getColorsList('LAL'));
 
 ### getFullName(teamAbbreviation) => `String`
 
-Return the NBA team full name.
+Return a `String` which is the NBA team full name.
 
 Note.  
 If received an excluded team abbreviation, return `undefined`.

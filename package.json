@@ -9,13 +9,17 @@
     "precommit": "lint-staged",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint:fix && npm run testonly",
+    "test": "npm run lint:fix && npm run testonly:cov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "testonly": "NODE_ENV=test jest",
     "testonly:cov": "jest --coverage --runInBand --forceExit --no-cache",
     "testonly:watch": "jest --watch"
   },
   "author": "xxhomey19",
-  "keywords": ["nba", "color", "basketball"],
+  "keywords": [
+    "nba",
+    "color",
+    "basketball"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xxhomey19/nba-color/issues"
@@ -29,6 +33,7 @@
     "babel-eslint": "^8.0.1",
     "babel-jest": "21.2.0",
     "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.6.0",
@@ -48,11 +53,21 @@
     "url": "https://github.com/xxhomey19/nba-color/tree/master"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js"],
-    "coveragePathIgnorePatterns": ["/node_modules/", "/__tests__/"],
-    "testPathIgnorePatterns": ["node_modules/"]
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules/"
+    ]
   }
 }
