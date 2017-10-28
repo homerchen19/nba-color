@@ -41,8 +41,15 @@ describe('NbaColor', () => {
       expect(teamMainColor).toBe(undefined);
     });
 
-    it('should match colorSchema if pass included team abbreviation', () => {
+    it('should match colorSchema if pass included uppercase team abbreviation', () => {
       const teamMainColor = getMainColor('GSW');
+      const validateResult = Joi.validate(teamMainColor, colorSchema);
+
+      expect(validateResult.error).toBe(null);
+    });
+
+    it('should match colorSchema if pass included lowercase team abbreviation', () => {
+      const teamMainColor = getMainColor('gsw');
       const validateResult = Joi.validate(teamMainColor, colorSchema);
 
       expect(validateResult.error).toBe(null);
@@ -62,8 +69,15 @@ describe('NbaColor', () => {
       expect(teamColors).toBe(undefined);
     });
 
-    it('should match colorsSchema if pass included team abbreviation', () => {
+    it('should match colorsSchema if pass included uppercase team abbreviation', () => {
       const teamColors = getColors('BOS');
+      const validateResult = Joi.validate(teamColors, colorsSchema);
+
+      expect(validateResult.error).toBe(null);
+    });
+
+    it('should match colorSchema if pass included lowercase team abbreviation', () => {
+      const teamColors = getColors('bos');
       const validateResult = Joi.validate(teamColors, colorsSchema);
 
       expect(validateResult.error).toBe(null);
@@ -83,8 +97,15 @@ describe('NbaColor', () => {
       expect(teamColorsList).toBe(undefined);
     });
 
-    it('should match colorsListSchema if pass included team abbreviation', () => {
+    it('should match colorsListSchema if pass included uppercase team abbreviation', () => {
       const teamColorsList = getColorsList('OKC');
+      const validateResult = Joi.validate(teamColorsList, colorsListSchema);
+
+      expect(validateResult.error).toBe(null);
+    });
+
+    it('should match colorsListSchema if pass included lowercase team abbreviation', () => {
+      const teamColorsList = getColorsList('okc');
       const validateResult = Joi.validate(teamColorsList, colorsListSchema);
 
       expect(validateResult.error).toBe(null);
@@ -104,8 +125,15 @@ describe('NbaColor', () => {
       expect(teamFullName).toBe(undefined);
     });
 
-    it('should return full name if pass included team abbreviation', () => {
+    it('should return full name if pass included uppercase team abbreviation', () => {
       const teamFullName = getFullName('CHI');
+
+      expect(typeof teamFullName).toBe('string');
+      expect(teamFullName).toEqual('Chicago Bulls');
+    });
+
+    it('should return full name if pass included lowercase team abbreviation', () => {
+      const teamFullName = getFullName('chi');
 
       expect(typeof teamFullName).toBe('string');
       expect(teamFullName).toEqual('Chicago Bulls');

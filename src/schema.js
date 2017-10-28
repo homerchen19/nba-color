@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-const hexRegex = /^#[a-zA-Z0-9]{6}$/;
+const hexRegex = /^#[a-z0-9]{6}$/;
 
 const colorSchema = Joi.object().keys({
   hex: Joi.string()
