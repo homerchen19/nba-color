@@ -374,7 +374,7 @@ const colors = {
         hex: '#002b5c',
         rgb: [0, 42, 92],
       },
-      grey: {
+      gray: {
         hex: '#c6cfd4',
         rgb: [198, 208, 215],
       },
