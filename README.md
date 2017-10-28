@@ -53,7 +53,7 @@ console.log(getMainColor('CLE'));
 
 /*
 {
-  hex: '#6F263D',
+  hex: '#6f263d',
   rgb: [111, 38, 61]
 }
 */
@@ -75,15 +75,15 @@ console.log(getColors('LAL'));
 /*
 {
   purple: {
-    hex: '#702F8A',
+    hex: '#702f8a',
     rgb: [112, 47, 138],
   },
   gold: {
-    hex: '#FFC72C',
+    hex: '#ffc72c',
     rgb: [255, 199, 44],
   },
   white: {
-    hex: '#fff',
+    hex: '#ffffff',
     rgb: [255, 255, 255],
   }
 }
