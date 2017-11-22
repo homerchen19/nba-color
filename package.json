@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/xxhomey19/nba-color#readme",
   "dependencies": {
-    "joi": "11.3.4"
+    "joi": "11.3.4",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
