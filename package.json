@@ -1,7 +1,17 @@
 {
   "name": "nba-color",
-  "version": "1.3.0",
   "description": "Get NBA team's color.",
+  "author": "xxhomey19",
+  "license": "MIT",
+  "homepage": "https://github.com/xxhomey19/nba-color#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxhomey19/nba-color/tree/master"
+  },
+  "bugs": {
+    "url": "https://github.com/xxhomey19/nba-color/issues"
+  },
+  "version": "1.3.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run clean && babel src -d lib",
@@ -14,17 +24,6 @@
     "testonly:cov": "jest --coverage --runInBand --forceExit --no-cache",
     "testonly:watch": "jest --watch"
   },
-  "author": "xxhomey19",
-  "keywords": [
-    "nba",
-    "color",
-    "basketball"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xxhomey19/nba-color/issues"
-  },
-  "homepage": "https://github.com/xxhomey19/nba-color#readme",
   "dependencies": {
     "joi": "11.3.4",
     "ramda": "^0.25.0"
@@ -47,18 +46,14 @@
     "jest": "21.2.1",
     "lint-staged": "^4.3.0",
     "prettier": "^1.7.4",
+    "prettier-package-json": "^1.4.0",
     "rimraf": "^2.6.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xxhomey19/nba-color/tree/master"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
+  "keywords": [
+    "basketball",
+    "color",
+    "nba"
+  ],
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"
@@ -69,6 +64,16 @@
     ],
     "testPathIgnorePatterns": [
       "node_modules/"
+    ]
+  },
+  "lint-staged": {
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
     ]
   }
 }
