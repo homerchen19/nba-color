@@ -7,10 +7,16 @@ const Team = teamAbbreviation => ({
   getMainColor: () => R.prop('mainColor', NbaColors[teamAbbreviation]),
   getColors: () => R.prop('colors', NbaColors[teamAbbreviation]),
   getColorsList: () => {
-    const getColorsKeys = R.compose(R.keys, R.prop('colors'));
+    const getColorsKeys = R.compose(
+      R.keys,
+      R.prop('colors')
+    );
     const checkEmpty = R.ifElse(R.isEmpty(), () => undefined, R.identity());
 
-    return R.compose(checkEmpty, getColorsKeys)(NbaColors[teamAbbreviation]);
+    return R.compose(
+      checkEmpty,
+      getColorsKeys
+    )(NbaColors[teamAbbreviation]);
   },
   getFullName: () => R.prop('fullName', NbaColors[teamAbbreviation]),
 });

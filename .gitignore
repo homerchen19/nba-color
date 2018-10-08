@@ -3,3 +3,4 @@ npm-debug.log
 coverage/
 build/
 lib/
+.DS_STORE

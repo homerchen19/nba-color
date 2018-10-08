@@ -1,4 +1,4 @@
-import Joi from 'joi';
+import Joi from 'joi'; // eslint-disable-line import/no-extraneous-dependencies
 
 const hexRegex = /^#[a-z0-9]{6}$/;
 

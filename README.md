@@ -1,4 +1,5 @@
 # NBA Color
+
 > Get all NBA team's color code (Hex or RGB).<br>
 > Useful for building NBA-related colorful product.
 
@@ -18,8 +19,8 @@ $ npm install nba-color
 ## Usage
 
 ```js
-const chalk = require('chalk');
-const { getMainColor, getFullName } = require('nba-color');
+import chalk from 'chalk';
+import { getMainColor, getFullName } from 'nba-color';
 
 const warriors = 'GSW';
 const { hex: warriorsColorHex } = getMainColor(warriors);
@@ -27,9 +28,9 @@ const warriorsFullName = getFullName(warriors);
 
 console.log(chalk.bgHex(warriorsColorHex).bold(warriorsFullName));
 ```
+
 result:
 ![screen shot 2017-10-28](https://user-images.githubusercontent.com/12113222/32114858-451ab492-bb0a-11e7-8839-b3012977a18c.png)
-
 
 ## API
 
@@ -40,19 +41,19 @@ The object's keys are **uppercase [Team Abbreviations](https://en.wikipedia.org/
 
 ### getMainColor(teamAbbreviation) => `Object`
 
-
 Parameter: `String`  
 It be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
 
 Return: `Object`  
-Contain the NBA team main color's **Hexadecimal Colors Code** and **RGB Color Code**.  
+Contain the NBA team main color's **Hexadecimal Colors Code** and **RGB Color Code**.
 
 Note.  
 If received an excluded team abbreviation, return `undefined`.
 
 Example
+
 ```js
-const { getMainColor } = require('nba-color');
+import { getMainColor } from 'nba-color';
 
 console.log(getMainColor('CLE'));
 
@@ -66,7 +67,6 @@ console.log(getMainColor('CLE'));
 
 ### getColors(teamAbbreviation) => `Object`
 
-
 Parameter: `String`  
 It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
 
@@ -77,8 +77,9 @@ Note.
 If received an excluded team abbreviation, return `undefined`.
 
 Example
+
 ```js
-const { getColors } = require('nba-color');
+import { getColors } from 'nba-color';
 
 console.log(getColors('LAL'));
 
@@ -102,7 +103,6 @@ console.log(getColors('LAL'));
 
 ### getColorsList(teamAbbreviation) => `Array`
 
-
 Parameter: `String`  
 It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
 
@@ -113,8 +113,9 @@ Note.
 If received an excluded team abbreviation, return `undefined`.
 
 Example
+
 ```js
-const { getColorsList } = require('nba-color');
+import { getColorsList } from 'nba-color';
 
 console.log(getColorsList('LAL'));
 
@@ -135,16 +136,16 @@ Note.
 If received an excluded team abbreviation, return `undefined`.
 
 Example
+
 ```js
-const { getFullName } = require('nba-color');
+import { getFullName } from 'nba-color';
 
 console.log(getFullName('SAS'));
 
 /*
 'San Antonio Spurs'
 */
-```  
-
+```
 
 ## License
 
