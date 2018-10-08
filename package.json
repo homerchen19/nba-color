@@ -14,6 +14,9 @@
   "version": "1.3.3",
   "main": "lib/nba-color.js",
   "module": "lib/nba-color.mjs",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "npm run clean && microbundle build src --ignore \"**/schema.js\",\"**/*.spec.js\" -d lib --sourcemap=false",
     "clean": "rimraf lib",
