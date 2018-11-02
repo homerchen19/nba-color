@@ -22,10 +22,12 @@
     "clean": "rimraf lib",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run build",
     "test": "npm run lint:fix && npm run testonly:cov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "testonly": "NODE_ENV=test jest",
     "testonly:cov": "jest --coverage --runInBand --forceExit --no-cache",
-    "testonly:watch": "jest --watch"
+    "testonly:watch": "jest --watch",
+    "preversion": "npm test"
   },
   "dependencies": {
     "ramda": "^0.25.0"
