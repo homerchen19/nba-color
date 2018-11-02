@@ -21,32 +21,24 @@ const Team = teamAbbreviation => ({
   getFullName: () => R.prop('fullName', NbaColors[teamAbbreviation]),
 });
 
-const getAllColors = () => NbaColors;
+export const getAllColors = () => NbaColors;
 
-const getMainColor = teamAbbreviation =>
+export const getMainColor = teamAbbreviation =>
   Team(teamAbbreviation)
     .toUpperCase()
     .getMainColor();
 
-const getColors = teamAbbreviation =>
+export const getColors = teamAbbreviation =>
   Team(teamAbbreviation)
     .toUpperCase()
     .getColors();
 
-const getColorsList = teamAbbreviation =>
+export const getColorsList = teamAbbreviation =>
   Team(teamAbbreviation)
     .toUpperCase()
     .getColorsList();
 
-const getFullName = teamAbbreviation =>
+export const getFullName = teamAbbreviation =>
   Team(teamAbbreviation)
     .toUpperCase()
     .getFullName();
-
-module.exports = {
-  getAllColors,
-  getMainColor,
-  getColors,
-  getFullName,
-  getColorsList,
-};

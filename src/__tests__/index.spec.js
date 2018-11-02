@@ -6,16 +6,16 @@ import {
   colorsSchema,
   colorsListSchema,
 } from '../schema';
-import NbaColor from '../';
+import {
+  getAllColors,
+  getMainColor,
+  getColors,
+  getColorsList,
+  getFullName,
+} from '..';
 
 describe('NbaColor', () => {
-  it('should exist', () => {
-    expect(NbaColor).toBeDefined();
-  });
-
   describe('getAllColors', () => {
-    const { getAllColors } = NbaColor;
-
     it('should exist', () => {
       expect(getAllColors).toBeDefined();
     });
@@ -29,8 +29,6 @@ describe('NbaColor', () => {
   });
 
   describe('getMainColor', () => {
-    const { getMainColor } = NbaColor;
-
     it('should exist', () => {
       expect(getMainColor).toBeDefined();
     });
@@ -57,8 +55,6 @@ describe('NbaColor', () => {
   });
 
   describe('getColors', () => {
-    const { getColors } = NbaColor;
-
     it('should exist', () => {
       expect(getColors).toBeDefined();
     });
@@ -85,8 +81,6 @@ describe('NbaColor', () => {
   });
 
   describe('getColorsList', () => {
-    const { getColorsList } = NbaColor;
-
     it('should exist', () => {
       expect(getColorsList).toBeDefined();
     });
@@ -113,8 +107,6 @@ describe('NbaColor', () => {
   });
 
   describe('getFullName', () => {
-    const { getFullName } = NbaColor;
-
     it('should exist', () => {
       expect(getFullName).toBeDefined();
     });
