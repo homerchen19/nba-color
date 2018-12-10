@@ -15,6 +15,7 @@
   "main": "lib/nba-color.js",
   "module": "lib/nba-color.mjs",
   "files": [
+    "index.d.ts",
     "lib"
   ],
   "scripts": {
