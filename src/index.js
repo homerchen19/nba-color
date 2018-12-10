@@ -2,43 +2,38 @@ import R from 'ramda';
 
 import NbaColors from './colors';
 
-const Team = teamAbbreviation => ({
-  toUpperCase: () => Team(R.toUpper(teamAbbreviation)),
-  getMainColor: () => R.prop('mainColor', NbaColors[teamAbbreviation]),
-  getColors: () => R.prop('colors', NbaColors[teamAbbreviation]),
-  getColorsList: () => {
-    const getColorsKeys = R.compose(
-      R.keys,
-      R.prop('colors')
-    );
-    const checkEmpty = R.ifElse(R.isEmpty(), () => undefined, R.identity());
+const getColorsKeys = R.compose(
+  R.keys,
+  R.prop('colors')
+);
 
-    return R.compose(
-      checkEmpty,
-      getColorsKeys
-    )(NbaColors[teamAbbreviation]);
-  },
-  getFullName: () => R.prop('fullName', NbaColors[teamAbbreviation]),
-});
+const checkEmpty = R.ifElse(R.isEmpty(), () => undefined, R.identity());
 
 export const getAllColors = () => NbaColors;
 
-export const getMainColor = teamAbbreviation =>
-  Team(teamAbbreviation)
-    .toUpperCase()
-    .getMainColor();
+export const getMainColor = R.compose(
+  R.nth(0),
+  R.propOr([], R.__, NbaColors),
+  R.toUpper
+);
 
-export const getColors = teamAbbreviation =>
-  Team(teamAbbreviation)
-    .toUpperCase()
-    .getColors();
+export const getColors = R.compose(
+  R.prop('colors'),
+  R.propOr({}, R.__, NbaColors),
+  R.toUpper
+);
 
-export const getColorsList = teamAbbreviation =>
-  Team(teamAbbreviation)
-    .toUpperCase()
-    .getColorsList();
+export const getFullName = R.compose(
+  R.prop('fullName'),
+  R.propOr({}, R.__, NbaColors),
+  R.toUpper
+);
 
-export const getFullName = teamAbbreviation =>
-  Team(teamAbbreviation)
-    .toUpperCase()
-    .getFullName();
+export const getColorsList = R.compose(
+  R.compose(
+    checkEmpty,
+    getColorsKeys
+  ),
+  R.propOr({}, R.__, NbaColors),
+  R.toUpper
+);
