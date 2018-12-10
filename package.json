@@ -28,7 +28,7 @@
     "testonly": "NODE_ENV=test jest",
     "testonly:cov": "jest --coverage --runInBand --forceExit --no-cache",
     "testonly:watch": "jest --watch",
-    "preversion": "npm test"
+    "preversion": "npm run lint:fix && npm run testonly:cov"
   },
   "dependencies": {
     "ramda": "^0.26.1"
