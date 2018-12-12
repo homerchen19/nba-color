@@ -22,6 +22,7 @@ const mainSchema = Joi.object()
     /[A-Z]{3}/,
     Joi.object().keys({
       fullName: Joi.string().required(),
+      mainColor: Joi.string().required(),
       colors: colorsSchema,
     })
   );

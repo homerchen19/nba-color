@@ -44,6 +44,10 @@ describe('NbaColor', () => {
       const validateResult = Joi.validate(teamMainColor, colorSchema);
 
       expect(validateResult.error).toBe(null);
+      expect(teamMainColor).toEqual({
+        hex: '#ffc72d',
+        rgb: [255, 199, 44],
+      });
     });
 
     it('should match colorSchema if pass included lowercase team abbreviation', () => {
@@ -51,6 +55,10 @@ describe('NbaColor', () => {
       const validateResult = Joi.validate(teamMainColor, colorSchema);
 
       expect(validateResult.error).toBe(null);
+      expect(teamMainColor).toEqual({
+        hex: '#ffc72d',
+        rgb: [255, 199, 44],
+      });
     });
   });
 
@@ -66,17 +74,37 @@ describe('NbaColor', () => {
     });
 
     it('should match colorsSchema if pass included uppercase team abbreviation', () => {
-      const teamColors = getColors('BOS');
+      const teamColors = getColors('GSW');
       const validateResult = Joi.validate(teamColors, colorsSchema);
 
       expect(validateResult.error).toBe(null);
+      expect(teamColors).toEqual({
+        gold: {
+          hex: '#ffc72d',
+          rgb: [255, 199, 44],
+        },
+        blue: {
+          hex: '#003da5',
+          rgb: [0, 61, 165],
+        },
+      });
     });
 
     it('should match colorSchema if pass included lowercase team abbreviation', () => {
-      const teamColors = getColors('bos');
+      const teamColors = getColors('gsw');
       const validateResult = Joi.validate(teamColors, colorsSchema);
 
       expect(validateResult.error).toBe(null);
+      expect(teamColors).toEqual({
+        gold: {
+          hex: '#ffc72d',
+          rgb: [255, 199, 44],
+        },
+        blue: {
+          hex: '#003da5',
+          rgb: [0, 61, 165],
+        },
+      });
     });
   });
 
@@ -96,6 +124,7 @@ describe('NbaColor', () => {
       const validateResult = Joi.validate(teamColorsList, colorsListSchema);
 
       expect(validateResult.error).toBe(null);
+      expect(teamColorsList).toEqual(['blue', 'orange', 'yellow', 'darkBlue']);
     });
 
     it('should match colorsListSchema if pass included lowercase team abbreviation', () => {
@@ -103,6 +132,7 @@ describe('NbaColor', () => {
       const validateResult = Joi.validate(teamColorsList, colorsListSchema);
 
       expect(validateResult.error).toBe(null);
+      expect(teamColorsList).toEqual(['blue', 'orange', 'yellow', 'darkBlue']);
     });
   });
 

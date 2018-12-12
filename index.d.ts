@@ -10,6 +10,7 @@ interface teamColors {
 interface colors {
   [teamAbbreviation: string]: {
     fullName: string;
+    mainColor: string;
     colors: teamColors;
   };
 }

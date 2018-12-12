@@ -1,39 +1,54 @@
-import R from 'ramda';
+import {
+  compose,
+  keys,
+  prop,
+  propOr,
+  path,
+  ifElse,
+  isEmpty,
+  identity,
+  toUpper,
+  __,
+} from 'ramda';
 
 import NbaColors from './colors';
 
-const getColorsKeys = R.compose(
-  R.keys,
-  R.prop('colors')
+const getColorsKeys = compose(
+  keys,
+  prop('colors')
 );
 
-const checkEmpty = R.ifElse(R.isEmpty(), () => undefined, R.identity());
+const checkEmpty = ifElse(isEmpty(), () => undefined, identity());
 
 export const getAllColors = () => NbaColors;
 
-export const getMainColor = R.compose(
-  R.nth(0),
-  R.propOr([], R.__, NbaColors),
-  R.toUpper
+export const getMainColor = compose(
+  team => {
+    const mainColorKey = prop('mainColor', team);
+
+    return path(['colors', mainColorKey], team);
+  },
+  propOr({}, __, NbaColors),
+  toUpper
 );
 
-export const getColors = R.compose(
-  R.prop('colors'),
-  R.propOr({}, R.__, NbaColors),
-  R.toUpper
+export const getColors = compose(
+  prop('colors'),
+  propOr({}, __, NbaColors),
+  toUpper
 );
 
-export const getFullName = R.compose(
-  R.prop('fullName'),
-  R.propOr({}, R.__, NbaColors),
-  R.toUpper
+export const getFullName = compose(
+  prop('fullName'),
+  propOr({}, __, NbaColors),
+  toUpper
 );
 
-export const getColorsList = R.compose(
-  R.compose(
+export const getColorsList = compose(
+  compose(
     checkEmpty,
     getColorsKeys
   ),
-  R.propOr({}, R.__, NbaColors),
-  R.toUpper
+  propOr({}, __, NbaColors),
+  toUpper
 );
