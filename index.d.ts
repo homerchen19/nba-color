@@ -1,22 +1,22 @@
-interface teamColor {
+export interface TeamColor {
   hex: string;
   tgb: [number, number, number];
 }
 
-interface teamColors {
-  [colorName: string]: teamColor;
+export interface TeamColors {
+  [colorName: string]: TeamColor;
 }
 
-interface colors {
+export interface Colors {
   [teamAbbreviation: string]: {
     fullName: string;
     mainColor: string;
-    colors: teamColors;
+    colors: TeamColors;
   };
 }
 
-export function getAllColors(): colors;
-export function getMainColor(teamAbbreviation: string): teamColor;
-export function getColors(teamAbbreviation: string): teamColors;
+export function getAllColors(): Colors;
+export function getMainColor(teamAbbreviation: string): TeamColor;
+export function getColors(teamAbbreviation: string): TeamColors;
 export function getFullName(teamAbbreviation: string): string;
 export function getColorsList(teamAbbreviation: string): string[];
