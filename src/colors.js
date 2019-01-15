@@ -12,6 +12,7 @@ const colors = {
   ATL: {
     fullName: 'Atlanta Hawks',
     mainColor: 'red',
+    secondaryColor: 'white',
     colors: {
       red: {
         hex: '#c8102e',
@@ -31,6 +32,7 @@ const colors = {
   BKN: {
     fullName: 'Brooklyn Nets',
     mainColor: 'black',
+    secondaryColor: 'white',
     colors: {
       black: {
         hex: '#010101',
@@ -42,6 +44,7 @@ const colors = {
   BOS: {
     fullName: 'Boston Celtics',
     mainColor: 'green',
+    secondaryColor: 'white',
     colors: {
       green: {
         hex: '#007a33',
@@ -62,6 +65,7 @@ const colors = {
   CHA: {
     fullName: 'Charlotte Hornets',
     mainColor: 'purple',
+    secondaryColor: 'teal',
     colors: {
       purple: {
         hex: '#201747',
@@ -81,6 +85,7 @@ const colors = {
   CHI: {
     fullName: 'Chicago Bulls',
     mainColor: 'red',
+    secondaryColor: 'black',
     colors: {
       red: {
         hex: '#ba0c2f',
@@ -93,6 +98,7 @@ const colors = {
   CLE: {
     fullName: 'Cleveland Cavaliers',
     mainColor: 'wine',
+    secondaryColor: 'gold',
     colors: {
       wine: {
         hex: '#6f263d',
@@ -112,6 +118,7 @@ const colors = {
   DAL: {
     fullName: 'Dallas Mavericks',
     mainColor: 'blue',
+    secondaryColor: 'silver',
     colors: {
       blue: {
         hex: '#0050b5',
@@ -132,6 +139,7 @@ const colors = {
   DEN: {
     fullName: 'Denver Nuggets',
     mainColor: 'blue',
+    secondaryColor: 'gold',
     colors: {
       blue: {
         hex: '#418fde',
@@ -151,6 +159,7 @@ const colors = {
   DET: {
     fullName: 'Detroit Pistons',
     mainColor: 'blue',
+    secondaryColor: 'red',
     colors: {
       blue: {
         hex: '#003da5',
@@ -170,6 +179,7 @@ const colors = {
   GSW: {
     fullName: 'Golden State Warriors',
     mainColor: 'gold',
+    secondaryColor: 'blue',
     colors: {
       gold: {
         hex: '#ffc72d',
@@ -184,6 +194,7 @@ const colors = {
   HOU: {
     fullName: 'Houston Rockets',
     mainColor: 'red',
+    secondaryColor: 'silver',
     colors: {
       red: {
         hex: '#ba0c2f',
@@ -204,6 +215,7 @@ const colors = {
   IND: {
     fullName: 'Indiana Pacers',
     mainColor: 'blue',
+    secondaryColor: 'gold',
     colors: {
       blue: {
         hex: '#041e42',
@@ -223,6 +235,7 @@ const colors = {
   LAC: {
     fullName: 'Los Angeles Clippers',
     mainColor: 'red',
+    secondaryColor: 'blue',
     colors: {
       red: {
         hex: '#d50032',
@@ -242,6 +255,7 @@ const colors = {
   LAL: {
     fullName: 'Los Angeles Lakers',
     mainColor: 'purple',
+    secondaryColor: 'gold',
     colors: {
       purple: {
         hex: '#702f8a',
@@ -257,6 +271,7 @@ const colors = {
   MEM: {
     fullName: 'Memphis Grizzlies',
     mainColor: 'midnightBlue',
+    secondaryColor: 'bealeStreetBlue',
     colors: {
       midnightBlue: {
         hex: '#23375b',
@@ -279,6 +294,7 @@ const colors = {
   MIA: {
     fullName: 'Miami Heat',
     mainColor: 'red',
+    secondaryColor: 'black',
     colors: {
       red: {
         hex: '#862633',
@@ -295,6 +311,7 @@ const colors = {
   MIL: {
     fullName: 'Milwaukee Bucks',
     mainColor: 'green',
+    secondaryColor: 'cream',
     colors: {
       green: {
         hex: '#2c5234',
@@ -315,6 +332,7 @@ const colors = {
   MIN: {
     fullName: 'Minnesota Timberwolves',
     mainColor: 'blue',
+    secondaryColor: 'green',
     colors: {
       blue: {
         hex: '#002b5c',
@@ -334,6 +352,7 @@ const colors = {
   NOP: {
     fullName: 'New Orleans Pelicans',
     mainColor: 'blue',
+    secondaryColor: 'red',
     colors: {
       blue: {
         hex: '#002b5c',
@@ -353,6 +372,7 @@ const colors = {
   NYK: {
     fullName: 'New York Knicks',
     mainColor: 'blue',
+    secondaryColor: 'orange',
     colors: {
       blue: {
         hex: '#003da5',
@@ -372,6 +392,7 @@ const colors = {
   OKC: {
     fullName: 'Oklahoma City Thunder',
     mainColor: 'blue',
+    secondaryColor: 'orange',
     colors: {
       blue: {
         hex: '#007dc3',
@@ -394,6 +415,7 @@ const colors = {
   ORL: {
     fullName: 'Orlando Magic',
     mainColor: 'blue',
+    secondaryColor: 'silver',
     colors: {
       blue: {
         hex: '#007dc5',
@@ -410,6 +432,7 @@ const colors = {
   PHI: {
     fullName: 'Philadelphia 76ers',
     mainColor: 'blue',
+    secondaryColor: 'red',
     colors: {
       blue: {
         hex: '#006bb6',
@@ -425,6 +448,7 @@ const colors = {
   PHX: {
     fullName: 'Phoenix Suns',
     mainColor: 'orange',
+    secondaryColor: 'purple',
     colors: {
       orange: {
         hex: '#e56020',
@@ -445,6 +469,7 @@ const colors = {
   POR: {
     fullName: 'Portland Trailblazers',
     mainColor: 'red',
+    secondaryColor: 'black',
     colors: {
       red: {
         hex: '#f0163a',
@@ -461,6 +486,7 @@ const colors = {
   SAC: {
     fullName: 'Sacramento Kings',
     mainColor: 'purple',
+    secondaryColor: 'silver',
     colors: {
       purple: {
         hex: '#724c9f',
@@ -477,6 +503,7 @@ const colors = {
   SAS: {
     fullName: 'San Antonio Spurs',
     mainColor: 'silver',
+    secondaryColor: 'black',
     colors: {
       silver: {
         hex: '#b6bfbf',
@@ -489,6 +516,7 @@ const colors = {
   TOR: {
     fullName: 'Toronto Raptors',
     mainColor: 'red',
+    secondaryColor: 'silver',
     colors: {
       red: {
         hex: '#ce1141',
@@ -505,6 +533,7 @@ const colors = {
   UTA: {
     fullName: 'Utah Jazz',
     mainColor: 'navy',
+    secondaryColor: 'yellow',
     colors: {
       navy: {
         hex: '#002b5c',
@@ -527,6 +556,7 @@ const colors = {
   WAS: {
     fullName: 'Washington Wizards',
     mainColor: 'navy',
+    secondaryColor: 'red',
     colors: {
       navy: {
         hex: '#0c2340',
