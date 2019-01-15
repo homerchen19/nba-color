@@ -78,6 +78,9 @@
     ],
     "testPathIgnorePatterns": [
       "node_modules/"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.spec.js"
     ]
   },
   "lint-staged": {

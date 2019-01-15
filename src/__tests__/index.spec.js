@@ -5,7 +5,7 @@ import {
   colorSchema,
   colorsSchema,
   colorsListSchema,
-} from '../schema';
+} from './schema';
 import {
   getAllColors,
   getMainColor,
