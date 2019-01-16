@@ -12,8 +12,14 @@
 
 ## Install
 
-```
+```shell
 $ npm install nba-color
+```
+
+or
+
+```shell
+$ yarn add nba-color
 ```
 
 ## Usage
@@ -32,17 +38,17 @@ console.log(chalk.bgHex(warriorsColorHex).bold(warriorsFullName));
 result:
 ![screen shot 2017-10-28](https://user-images.githubusercontent.com/12113222/32114858-451ab492-bb0a-11e7-8839-b3012977a18c.png)
 
-## API
+## APIs
 
-### getAllColors() => `Object`
+### `getAllColors()` => `Object`
 
 Return an `Object` containing all NBA teams colors data.  
 The object's keys are **uppercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
 
-### getMainColor(teamAbbreviation) => `Object`
+### `getMainColor(teamAbbreviation)` => `Object`
 
 Parameter: `String`  
-It be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
+It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
 
 Return: `Object`  
 Contain the NBA team main color's **Hexadecimal Colors Code** and **RGB Color Code**.
@@ -65,7 +71,33 @@ console.log(getMainColor('CLE'));
 */
 ```
 
-### getColors(teamAbbreviation) => `Object`
+### `getSecondaryColor(teamAbbreviation)` => `Object`
+
+Parameter: `String`  
+It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
+
+Return: `Object`  
+Contain the NBA team secondary color's **Hexadecimal Colors Code** and **RGB Color Code**.
+
+Note.  
+If received an excluded team abbreviation, return `undefined`.
+
+Example
+
+```js
+import { getSecondaryColor } from 'nba-color';
+
+console.log(getSecondaryColor('NYK'));
+
+/*
+{
+  hex: '#ff671f',
+  rgb: [255, 103, 31],
+}
+*/
+```
+
+### `getColors(teamAbbreviation)` => `Object`
 
 Parameter: `String`  
 It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
@@ -101,7 +133,7 @@ console.log(getColors('LAL'));
 */
 ```
 
-### getColorsList(teamAbbreviation) => `Array`
+### `getColorsList(teamAbbreviation)` => `Array`
 
 Parameter: `String`  
 It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
@@ -124,7 +156,7 @@ console.log(getColorsList('LAL'));
 */
 ```
 
-### getFullName(teamAbbreviation) => `String`
+### `getFullName(teamAbbreviation)` => `String`
 
 Parameter: `String`  
 It can be **uppercase or lowercase [Team Abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations)**.
@@ -149,4 +181,4 @@ console.log(getFullName('SAS'));
 
 ## License
 
-MIT
+MIT © [xxhomey19](https://github.com/xxhomey19)

@@ -17,6 +17,7 @@ export interface Colors {
 
 export function getAllColors(): Colors;
 export function getMainColor(teamAbbreviation: string): TeamColor;
+export function getSecondaryColor(teamAbbreviation: string): TeamColor;
 export function getColors(teamAbbreviation: string): TeamColors;
 export function getFullName(teamAbbreviation: string): string;
 export function getColorsList(teamAbbreviation: string): string[];

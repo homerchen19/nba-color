@@ -20,17 +20,22 @@ const getColorsKeys = compose(
 
 const checkEmpty = ifElse(isEmpty(), () => undefined, identity());
 
+const getSpecialColorByKey = key =>
+  compose(
+    team => {
+      const colorKey = prop(key, team);
+
+      return path(['colors', colorKey], team);
+    },
+    propOr({}, __, NbaColors),
+    toUpper
+  );
+
 export const getAllColors = () => NbaColors;
 
-export const getMainColor = compose(
-  team => {
-    const mainColorKey = prop('mainColor', team);
+export const getMainColor = getSpecialColorByKey('mainColor');
 
-    return path(['colors', mainColorKey], team);
-  },
-  propOr({}, __, NbaColors),
-  toUpper
-);
+export const getSecondaryColor = getSpecialColorByKey('secondaryColor');
 
 export const getColors = compose(
   prop('colors'),

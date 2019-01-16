@@ -9,6 +9,7 @@ import {
 import {
   getAllColors,
   getMainColor,
+  getSecondaryColor,
   getColors,
   getColorsList,
   getFullName,
@@ -58,6 +59,40 @@ describe('NbaColor', () => {
       expect(teamMainColor).toEqual({
         hex: '#ffc72d',
         rgb: [255, 199, 44],
+      });
+    });
+  });
+
+  describe('getSecondaryColor', () => {
+    it('should exist', () => {
+      expect(getSecondaryColor).toBeDefined();
+    });
+
+    it('should return undefined if pass excluded team abbreviation', () => {
+      const teamSecondaryColor = getSecondaryColor('QQ');
+
+      expect(teamSecondaryColor).toBe(undefined);
+    });
+
+    it('should match colorSchema if pass included uppercase team abbreviation', () => {
+      const teamSecondaryColor = getSecondaryColor('GSW');
+      const validateResult = Joi.validate(teamSecondaryColor, colorSchema);
+
+      expect(validateResult.error).toBe(null);
+      expect(teamSecondaryColor).toEqual({
+        hex: '#003da5',
+        rgb: [0, 61, 165],
+      });
+    });
+
+    it('should match colorSchema if pass included lowercase team abbreviation', () => {
+      const teamSecondaryColor = getSecondaryColor('gsw');
+      const validateResult = Joi.validate(teamSecondaryColor, colorSchema);
+
+      expect(validateResult.error).toBe(null);
+      expect(teamSecondaryColor).toEqual({
+        hex: '#003da5',
+        rgb: [0, 61, 165],
       });
     });
   });
